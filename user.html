@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details - Muscle Mentor</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body id="top">
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+        <span class="span">Muscle Mentor</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="register.html" class="navbar-link">Register</a></li>
+        </ul>
+      </nav>
+
+      <a href="login.html" class="btn btn-secondary">Login</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+      <!-- User Details Section -->
+      <section class="section user-details bg-dark has-after has-bg-image" aria-label="user details"
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+          <div class="user-details-content">
+            <h2 class="h2 section-title">Welcome, <span id="user-full-name"></span>!</h2>
+            <p class="section-text">
+              Here are your registration and fitness details:
+            </p>
+
+            <div class="details">
+              <p><strong>Full Name:</strong> <span id="display-full-name"></span></p>
+              <p><strong>Email:</strong> <span id="display-email"></span></p>
+              <p><strong>Age:</strong> <span id="display-age"></span></p>
+              <p><strong>Weight:</strong> <span id="display-weight"></span> kg</p>
+              <p><strong>Height:</strong> <span id="display-height"></span> cm</p>
+              <p><strong>Fitness Goal:</strong> <span id="display-fitness-goal"></span></p>
+              <p><strong>Activity Level:</strong> <span id="display-activity-level"></span></p>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">Go to Home</a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+        <!-- Footer content (copy from your existing footer) -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <!-- Footer bottom content (copy from your existing footer) -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Ionicons and Custom JS -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Retrieve data from local storage
+    const fullName = localStorage.getItem('fullName');
+    const email = localStorage.getItem('email');
+    const age = localStorage.getItem('age');
+    const weight = localStorage.getItem('weight');
+    const height = localStorage.getItem('height');
+    const fitnessGoal = localStorage.getItem('fitnessGoal');
+    const activityLevel = localStorage.getItem('activityLevel');
+
+    // Display data on the page
+    document.getElementById('user-full-name').textContent = fullName;
+    document.getElementById('display-full-name').textContent = fullName;
+    document.getElementById('display-email').textContent = email;
+    document.getElementById('display-age').textContent = age;
+    document.getElementById('display-weight').textContent = weight;
+    document.getElementById('display-height').textContent = height;
+    document.getElementById('display-fitness-goal').textContent = fitnessGoal;
+    document.getElementById('display-activity-level').textContent = activityLevel;
+  </script>
+</body>
+
+</html>
